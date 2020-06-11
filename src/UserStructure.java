@@ -1,18 +1,19 @@
 import interfaces.UserActivities;
 
-import java.util.Map;
+import java.util.HashMap;
 
 public class UserStructure implements UserActivities {
     private int userID;
     private String username;
     private String password;
-    private Map<Integer, ListStructure> lists;
+    private HashMap<Integer, ListStructure> lists;
     private int listID = 0;
 
     UserStructure(int id, String name, String password){
         this.userID = id;
         this.username = name;
         this.password = password;
+        this.lists = new HashMap<>();
     }
 
     public int getUserID(){
